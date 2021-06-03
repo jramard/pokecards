@@ -1,0 +1,8 @@
+{
+  "name": "pokecards",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue",
+  "id": "5f200ee4"
+}
