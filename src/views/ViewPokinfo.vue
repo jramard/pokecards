@@ -1,5 +1,5 @@
 <template>
-  <ion-page class="viewPokinfo">
+  <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
         <ion-buttons slot="start">
@@ -15,15 +15,11 @@
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
-    <ion-content :fullscreen="true" v-if="pokinfo" class="viewPokinfo__main">
-      <ion-img
-        :src="getPokimage(pokinfo.id)"
-        :alt="pokinfo.title"
-        class="viewPokinfo__main__hero"
-      ></ion-img>
+    <ion-content :fullscreen="true" v-if="pokinfo">
+      <ion-img :src="getPokimage(pokinfo.id)" :alt="pokinfo.title"></ion-img>
       <div class="ion-padding">
-        <h1 class="viewPokinfo__main__title">{{ pokinfo.title }}</h1>
-        <p class="viewPokinfo__main__content">{{ pokinfo.content }}</p>
+        <h1>{{ pokinfo.title }}</h1>
+        <p>{{ pokinfo.content }}</p>
       </div>
     </ion-content>
   </ion-page>
@@ -82,30 +78,24 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.viewPokinfo {
-  .ion-padding {
-    padding: 20px;
-  }
-  .viewPokinfo__main {
-    .viewPokinfo__main__hero {
-      height: 200px;
-      object-fit: cover;
-    }
-    .viewPokinfo__main__title {
-      margin: 0;
-      font-weight: bold;
-      font-size: 22px;
-    }
-    .viewPokinfo__main__content {
-      line-height: 22px;
-    }
-  }
-  @media (min-width: 576px) {
-    .viewPokinfo__main {
-      .viewPokinfo__main__hero {
-        height: 300px;
-      }
-    }
+.ion-padding {
+  padding: 20px;
+}
+ion-img {
+  height: 200px;
+  object-fit: cover;
+}
+h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 22px;
+}
+p {
+  line-height: 22px;
+}
+@media (min-width: 576px) {
+  ion-img {
+    height: 300px;
   }
 }
 </style>
