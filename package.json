@@ -21,6 +21,7 @@
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
+    "@capacitor-community/electron": "^1.4.2",
     "@capacitor/cli": "3.0.0",
     "@ionic/lab": "3.2.10",
     "@types/jest": "^24.0.19",
