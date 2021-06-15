@@ -4,6 +4,7 @@ import Tabs from '../views/Tabs.vue';
 import Home from '../views/Home.vue';
 import Cards from '../views/Cards.vue';
 import Gallery from '../views/Gallery.vue';
+import Three from '../views/Three.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -36,6 +37,11 @@ const routes: Array<RouteRecordRaw> = [
         path: 'gallery',
         name: 'Gallery',
         component: Gallery
+      },
+      {
+        path: 'three',
+        name: 'Three',
+        component: Three
       },
     ],
   },
