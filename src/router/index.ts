@@ -3,6 +3,7 @@ import { RouteRecordRaw } from 'vue-router';
 import Tabs from '../views/Tabs.vue';
 import Home from '../views/Home.vue';
 import Cards from '../views/Cards.vue';
+import Gallery from '../views/Gallery.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -30,6 +31,11 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/card/:id',
         component: () => import('../views/ViewPokinfo.vue')
+      },
+      {
+        path: 'gallery',
+        name: 'Gallery',
+        component: Gallery
       },
     ],
   },

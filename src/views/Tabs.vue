@@ -11,6 +11,11 @@
           <ion-icon :icon="ellipse" />
           <ion-label>Cards</ion-label>
         </ion-tab-button>
+
+        <ion-tab-button tab="tab3" href="/gallery">
+          <ion-icon :icon="images" />
+          <ion-label>Gallery</ion-label>
+        </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
   </ion-page>
@@ -25,7 +30,7 @@ import {
   IonIcon,
   IonPage,
 } from "@ionic/vue";
-import { ellipse, triangle } from "ionicons/icons";
+import { ellipse, images, triangle } from "ionicons/icons";
 
 export default {
   name: "Tabs",
@@ -33,6 +38,7 @@ export default {
   setup() {
     return {
       ellipse,
+      images,
       triangle,
     };
   },
