@@ -38,6 +38,7 @@ workflows:
           EOF          
       - name: Update dependencies and copy web assets to native project
         script: |
+          ionic build
           # npx cap copy # <- use this is you don't need to update native dependencies
           npx cap sync # <- update native dependencies and copy web assets to native project          
       - name: Build Android release
