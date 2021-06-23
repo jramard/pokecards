@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package fr.namkin.ionicpoc;
 
 import com.getcapacitor.BridgeActivity;
 
