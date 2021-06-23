@@ -1,1 +1,6 @@
-{}
+{
+	"appId": "fr.namkin.ionic-poc",
+	"appName": "pokecards",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
