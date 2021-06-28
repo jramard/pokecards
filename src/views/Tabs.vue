@@ -3,12 +3,12 @@
     <ion-tabs>
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="tab1" href="/home">
-          <ion-icon :icon="triangle" />
-          <ion-label>Home</ion-label>
+          <ion-icon :icon="mail" />
+          <ion-label>Mails</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="tab2" href="/cards">
-          <ion-icon :icon="ellipse" />
+          <ion-icon :icon="albums" />
           <ion-label>Cards</ion-label>
         </ion-tab-button>
 
@@ -18,7 +18,7 @@
         </ion-tab-button>
 
         <ion-tab-button tab="tab4" href="/three">
-          <ion-icon :icon="square" />
+          <ion-icon :icon="cube" />
           <ion-label>Three</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
@@ -35,17 +35,17 @@ import {
   IonIcon,
   IonPage,
 } from "@ionic/vue";
-import { ellipse, images, square, triangle } from "ionicons/icons";
+import { albums, cube, images, mail } from "ionicons/icons";
 
 export default {
   name: "Tabs",
   components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage },
   setup() {
     return {
-      ellipse,
+      albums,
+      cube,
       images,
-      square,
-      triangle,
+      mail,
     };
   },
 };

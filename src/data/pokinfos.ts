@@ -7,7 +7,7 @@ export interface Pokinfo {
 
 const pokinfos: Pokinfo[] = [
     {
-        title: "Pikachu & Carapuce",
+        title: "Pikachu & Squirtle",
         subtitle: "Sed a bibendum sapien",
         content:
             "Nam ac felis sit amet nisi euismod auctor a vel urna. In a hendrerit sapien. Fusce sem mi, elementum vitae nulla a, venenatis iaculis quam.",

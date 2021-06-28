@@ -21,8 +21,8 @@ import {
   IonTitle,
 } from "@ionic/vue";
 import { defineComponent } from "vue";
-// import { init } from "@/composables/threeExample";
-import { init } from "@/composables/threeLittlestTokyo";
+import { init } from "@/composables/threeExample";
+// import { init } from "@/composables/threeLittlestTokyo";
 
 export default defineComponent({
   name: "Three",
