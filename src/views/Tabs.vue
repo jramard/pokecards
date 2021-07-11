@@ -4,7 +4,7 @@
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="tab1" href="/home">
           <ion-icon :icon="mail" />
-          <ion-label>Mails</ion-label>
+          <ion-label>Inbox</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="tab2" href="/cards">
