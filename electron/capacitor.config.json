@@ -1,6 +1,6 @@
 {
 	"appId": "io.ionic.starter",
-	"appName": "pokecards",
+	"appName": "Ionic POC",
 	"webDir": "dist",
 	"bundledWebRuntime": false
 }

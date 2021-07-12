@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">pokecards</string>
-    <string name="title_activity_main">pokecards</string>
+    <string name="app_name">Ionic POC</string>
+    <string name="title_activity_main">Ionic POC</string>
     <string name="package_name">fr.namkin.ionicpoc</string>
     <string name="custom_url_scheme">fr.namkin.ionicpoc</string>
 </resources>
