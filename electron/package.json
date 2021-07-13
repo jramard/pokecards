@@ -10,6 +10,7 @@
     "electron:build-windows": "npm run build && electron-builder build --windows",
     "electron:build-mac": "npm run build && electron-builder build --mac"
   },
+  "repository": "https://github.com/jramard/pokecards",
   "dependencies": {
     "@capacitor-community/electron": "^1.3.1"
   },
@@ -44,5 +45,6 @@
       "target": "nsis",
       "icon": "appIcon.ico"
     }
-  }
+  },
+  "publish": "github"
 }
