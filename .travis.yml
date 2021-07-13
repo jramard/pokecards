@@ -33,10 +33,17 @@ script:
         -v ~/.cache/electron:/root/.cache/electron \
         -v ~/.cache/electron-builder:/root/.cache/electron-builder \
         electronuserland/builder:wine \
-        /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn electron:build-windows"
+        /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn success-build-message"
     else
-      yarn electron:build-mac
+      yarn success-build-message
     fi
+
+deploy:
+  provider: script
+  script: bash deploy.travis.sh
+  skip_cleanup: true
+  on:
+    branch: master
 
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
