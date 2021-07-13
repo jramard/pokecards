@@ -27,6 +27,9 @@
   "license": "MIT",
   "build": {
     "appId": "fr.namkin.ionicpoc",
+    "appImage": {
+      "license": "LICENSE"
+    },
     "productName": "IonicPOC",
     "files": [
       "assets/*",
@@ -44,7 +47,7 @@
     "win": {
       "target": "nsis",
       "icon": "appIcon.ico"
-    }
-  },
-  "publish": "github"
+    },
+    "publish": "github"
+  }
 }
