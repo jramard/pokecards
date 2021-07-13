@@ -4,5 +4,6 @@
 app
 node_modules
 build
+!build/index.js
 dist
 appx
