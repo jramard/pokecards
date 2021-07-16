@@ -12,6 +12,7 @@ matrix:
       dist: trusty
       services: docker
       language: generic
+      node_js: "14"
 
 cache:
   yarn: true
@@ -24,7 +25,7 @@ before_install:
   - |
     yarn --link-duplicates --pure-lockfile
   - |
-    ionic build
+    yarn build
   - |
     npx cap sync @capacitor-community/electron
   - |
