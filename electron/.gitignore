@@ -3,9 +3,5 @@
 # And the CLI then renames it
 app
 node_modules
-build
-!build/index.js
-!build/appIcon.ico
-!build/appIcon.png
 dist
 appx
