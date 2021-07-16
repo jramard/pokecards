@@ -22,6 +22,12 @@ cache:
 
 before_install:
   - |
+    yarn --link-duplicates --pure-lockfile
+  - |
+    ionic build
+  - |
+    npx cap sync @capacitor-community/electron
+  - |
     cd ./electron
 
 script:
