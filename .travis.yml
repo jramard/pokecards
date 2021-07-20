@@ -11,10 +11,7 @@ matrix:
     - os: linux
       dist: trusty
       services: docker
-      language: 
-        - generic
-        - node_js
-      node_js: "14"
+      language: generic
 
 cache:
   yarn: true
@@ -24,6 +21,10 @@ cache:
     - $HOME/.cache/electron-builder
 
 before_install:
+  - |
+    nvm install --lts
+  - |
+    nvm use --lts
   - |
     yarn --link-duplicates --pure-lockfile
   - |
