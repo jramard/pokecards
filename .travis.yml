@@ -22,11 +22,11 @@ cache:
     - $HOME/.cache/electron-builder
 
 before_install:
-  - |
-    nvm install --lts
-  - |
-    nvm use --lts
-  - |
+  # - |
+  #   nvm install --lts
+  # - |
+  #   nvm use --lts
+  # - |
     yarn --link-duplicates --pure-lockfile
   - |
     yarn build
