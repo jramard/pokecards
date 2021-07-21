@@ -11,7 +11,8 @@ matrix:
     - os: linux
       dist: trusty
       services: docker
-      language: generic
+      language: node_js
+      node_js: "14"
 
 cache:
   yarn: true
