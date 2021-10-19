@@ -1,64 +1,64 @@
-matrix:
-  include:
-    - os: osx
-      osx_image: xcode10.2
-      language: node_js
-      node_js: "14"
-      env:
-        - ELECTRON_CACHE=$HOME/.cache/electron
-        - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
-
-    - os: linux
-      dist: trusty
-      services: docker
-      language: node_js
-      node_js: "14"
-
-cache:
-  yarn: true
-  directories:
-    - node_modules
-    - $HOME/.cache/electron
-    - $HOME/.cache/electron-builder
-
-before_install:
-  # - |
-  #   nvm install --lts
-  # - |
-  #   nvm use --lts
-  - |
-    yarn --link-duplicates --pure-lockfile
-  - |
-    yarn build
-  - |
-    npx cap sync @capacitor-community/electron
-  - |
-    cd ./electron
-
-script:
-  - |
-    if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-      docker run --rm \
-        -e GH_TOKEN \
-        -v ${PWD}:/project \
-        -v ~/.cache/electron:/root/.cache/electron \
-        -v ~/.cache/electron-builder:/root/.cache/electron-builder \
-        electronuserland/builder:wine \
-        /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn release --linux --win"
-    else
-      yarn release
-    fi
-
-# deploy:
-#   provider: script
-#   script: bash deploy.travis.sh
-#   skip_cleanup: true
-#   on:
-#     branch: master
-
-before_cache:
-  - rm -rf $HOME/.cache/electron-builder/wine
-
-branches:
-  only:
-    - master
+#matrix:
+#  include:
+#    - os: osx
+#      osx_image: xcode10.2
+#      language: node_js
+#      node_js: "14"
+#      env:
+#        - ELECTRON_CACHE=$HOME/.cache/electron
+#        - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
+#
+#    - os: linux
+#      dist: trusty
+#      services: docker
+#      language: node_js
+#      node_js: "14"
+#
+#cache:
+#  yarn: true
+#  directories:
+#    - node_modules
+#    - $HOME/.cache/electron
+#    - $HOME/.cache/electron-builder
+#
+#before_install:
+#  # - |
+#  #   nvm install --lts
+#  # - |
+#  #   nvm use --lts
+#  - |
+#    yarn --link-duplicates --pure-lockfile
+#  - |
+#    yarn build
+#  - |
+#    npx cap sync @capacitor-community/electron
+#  - |
+#    cd ./electron
+#
+#script:
+#  - |
+#    if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+#      docker run --rm \
+#        -e GH_TOKEN \
+#        -v ${PWD}:/project \
+#        -v ~/.cache/electron:/root/.cache/electron \
+#        -v ~/.cache/electron-builder:/root/.cache/electron-builder \
+#        electronuserland/builder:wine \
+#        /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn release --linux --win"
+#    else
+#      yarn release
+#    fi
+#
+## deploy:
+##   provider: script
+##   script: bash deploy.travis.sh
+##   skip_cleanup: true
+##   on:
+##     branch: master
+#
+#before_cache:
+#  - rm -rf $HOME/.cache/electron-builder/wine
+#
+#branches:
+#  only:
+#    - master
